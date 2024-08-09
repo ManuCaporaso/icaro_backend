@@ -1,0 +1,193 @@
+/*TABLA DE CAMPEONATO*/
+
+
+.table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #E02807;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #E04F07;
+}
+
+th {
+    font-size: 16px;
+}
+
+td {
+    font-size: 20px;
+    color: black;
+}
+
+td img {
+    width: 70px;
+    height: auto;
+    border-radius: 5px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #E04F07;
+}
+
+
+
+/*PILOTOS*/
+
+h2{
+    color: #000000;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3{
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+p{
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #dddddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card img.main-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-content .team-img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Button Styles */
+button {
+    padding: 8px 16px;
+    background-color: #E02807;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #E04F07;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button.edit-btn {
+    background-color: #FFA500;
+}
+
+button.edit-btn:hover {
+    background-color: #FF8C00;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+}
+
+button.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Form Styles */
+.form-container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #E02807;
+    outline: none;
+}
+
+#save-button {
+    margin-top: 10px;
+    font-size: 18px;
+}

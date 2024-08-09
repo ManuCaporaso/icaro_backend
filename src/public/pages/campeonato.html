@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/campeonato.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3e8b0b13fa.js" crossorigin="anonymous"></script>
+    <title>Campeonato 2024</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>ASOCIACION CORREDORES TURISMO CARRETERA - BLOG INFORMATIVO</h1>
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <nav>
+                <a href="../../index.html"><img class="logo" src="../assets/logo.png" alt="logo"></a>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Pilotos</a></li>
+                    <li><a href="#">Calendario</a></li>
+                    <li><a href="./login.html">Iniciar Sesión</a></li>
+                    <li><a href="#">Registrarse</a></li>
+                    <li><a href="https://www.instagram.com/actcargentina/" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a></li>
+                    <li><a href="https://www.facebook.com/actcargentina" target="_blank"><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <button id="listarCampeonatoBtn">MOSTRAR TABLA DE CAMPEONATO</button>
+    </div>
+    <div class="table-container">
+        <table id="campeonatoTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Posición</th>
+                    <th>Piloto</th>
+                    <th>Número Auto</th>
+                    <th>Nombre y Apellido</th>
+                    <th>Marca</th>
+                    <th>Puntos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los registros se llenarán aquí con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-container">
+        <h2>Crear o Actualizar Registro</h2>
+        <form id="campeonato-form">
+            <input type="hidden" id="id" name="id">
+            <label for="posicion">Posición:</label>
+            <input type="number" id="posicion" name="posicion" required>
+            <label for="piloto">Piloto (URL imagen):</label>
+            <input type="text" id="piloto" name="piloto" required>
+            <label for="numero_auto">Número Auto:</label>
+            <input type="number" id="numero_auto" name="numero_auto" required>
+            <label for="nombre_apellido">Nombre y Apellido:</label>
+            <input type="text" id="nombre_apellido" name="nombre_apellido" required>
+            <label for="marca">Marca (URL imagen):</label>
+            <input type="text" id="marca" name="marca" required>
+            <label for="puntos">Puntos:</label>
+            <input type="number" id="puntos" name="puntos" required>
+            <button type="submit" id="save-button">Guardar</button>
+        </form>
+    </div>
+
+
+    <footer>
+        <div class="navbar2">
+            <p>&copy; 2024 Diplomatura Full Stack ICARO - Todos los derechos reservados</p>
+            <nav class="final">
+                <ul>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </nav>
+            <a href="../../index.html"><img src="../assets/logo.png" alt="logo"></a>
+        </div>
+    </footer>
+    
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
