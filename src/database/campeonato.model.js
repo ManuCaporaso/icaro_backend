@@ -29,7 +29,7 @@ const Campeonato = sequelize.define('Campeonato', {
         allowNull: false
     },
     puntos: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.INTEGER,
         allowNull: false
     }
 }, {

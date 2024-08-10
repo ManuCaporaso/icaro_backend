@@ -40,14 +40,14 @@ document.getElementById('campeonato-form').addEventListener('submit', function(e
 
     const id = data.id;
 
+    const method = id ? 'PUT' : 'POST';
+    const url = id ? `http://localhost:3000/api/campeonato/${id}` : 'http://localhost:3000/api/campeonato';
+
     // Validar que todos los campos estén llenos
     if (!data.posicion || !data.piloto || !data.numero_auto || !data.nombre_apellido || !data.marca || !data.puntos) {
         alert('Todos los campos son obligatorios.');
         return;
     }
-
-    const method = id ? 'PUT' : 'POST';
-    const url = id ? `http://localhost:3000/api/campeonato/${id}` : 'http://localhost:3000/api/campeonato';
 
     fetch(url, {
         method: method,

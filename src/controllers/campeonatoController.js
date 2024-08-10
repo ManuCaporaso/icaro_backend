@@ -1,5 +1,4 @@
-const Campeonato = require('../database/models');
-const { validationResult } = require('express-validator');
+const Campeonato = require('../database/campeonato.model');
 
 // Obtener todos los registros
 exports.getAll = async (req, res) => {
@@ -27,12 +26,6 @@ exports.getOne = async (req, res) => {
 
 // Crear un nuevo registro
 exports.create = async (req, res) => {
-    // Validar los datos de la solicitud
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }
-
     const { posicion, piloto, numero_auto, nombre_apellido, marca, puntos } = req.body;
     try {
         const nuevoCampeonato = await Campeonato.create({ posicion, piloto, numero_auto, nombre_apellido, marca, puntos });
@@ -44,12 +37,6 @@ exports.create = async (req, res) => {
 
 // Actualizar un registro
 exports.update = async (req, res) => {
-    // Validar los datos de la solicitud
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }
-
     const { id } = req.params;
     const { posicion, piloto, numero_auto, nombre_apellido, marca, puntos } = req.body;
     try {
